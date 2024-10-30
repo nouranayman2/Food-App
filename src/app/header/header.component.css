@@ -6,6 +6,9 @@ header{
 
 a{
     color: brown;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -17,7 +20,7 @@ a:hover{
 .container{
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
 
 }
 
@@ -25,18 +28,39 @@ a.logo{
     font-weight: bold;
     padding: 1em; 
 }
+
 .logo-image {
-    width: 50px; 
-    height: auto; 
-    vertical-align: left; 
+    width: 40px; 
+    height: auto;
+    margin-right: 5px; 
+  }
+
+
+  nav ul {
+    list-style: none;
+    margin: 25;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    display: flex;
+    align-items: center;
+  }
+
+  .cart-image {
+    width: 40px;      
+  height: auto;
+  margin-right: 5px; 
+  vertical-align: middle;
+  }
+  .cart-image:hover{
+    color: white;
+  }
+
+.cart-link:hover .cart-image {
+    opacity: 0.3;
+    
 }
 
-nav ul{
-    list-style-type: none;
-    margin: 0;
-
-}
-nav ul li a{
-    padding: 1em;
-    display: inline-block;
-}
