@@ -13,11 +13,11 @@ import { CommonModule } from '@angular/common';
 })
 export class TagsComponent {
   @Input()  
-  foodPagetags?: string; 
-
-  tags: Tag[] = [];
+  foodPagetags?: string[];  
+  tags?: Tag[] = [];
   constructor(private fs:FoodService){}
   ngOnInit(): void {
+    if(!this.foodPagetags)
     this.tags = this.fs.getAllTag();
 
   }

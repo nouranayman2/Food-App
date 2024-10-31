@@ -1,8 +1,118 @@
-.food-image {
-    width: 100%;              
-    max-height: 500px;         
-    object-fit: cover;        
-    margin: 0 auto;
-    display: block;            
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    height: 100vh;
+    padding: 3rem;
+  }
+  
+  .food-image {
+    width: 60%;
+    max-width: 400px;
+    max-height: 500px;
+    object-fit: cover;
+  }
+  
+  .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 30rem;
+    max-width: 45rem;
+    margin-left: auto;
+    gap: 1.2rem;
+  }
+  
+  .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .favorites {
+    margin-left: auto;
+   
+  }
+  
+  .favorite button {
+    color: red;
+  }
+  
+  .not button {
+    color: gray;
+  }
+  
+  .stars {
+    display: flex;
+    gap: 4px;
+    font-size: 32px;
+  }
+  
+  mat-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: gold;
+  }
+  
+  mat-icon:hover {
+    color: darkorange;
+  }
+  
+  .product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .origins span {
+    border-radius: 2rem;
+    background-color: whitesmoke;
+    color: grey;
+    font-size: 0.8rem;
+    margin-right: 0.3rem;
+    display: inline-block;
+  }
+  
+  .cook-time {
+    font-size: 0.8rem;
+    text-align: right;
+    color: brown;
+  }
+  
+  .product-footer, .origins span, .cook-time, .prices {
+    font-size: 1.2rem;
+  }
+  
+ .Cart {
+    background-color: #ff6347; 
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 3rem;
+    align-self: flex-start;
+    border-radius: 10rem;
+  }
+  
+  .Cart:hover {
+    background-color: #e5533c;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px); 
+  }
+  
+  .Cart:active {
+    transform: translateY(1px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
   

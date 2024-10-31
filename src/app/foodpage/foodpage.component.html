@@ -1,12 +1,41 @@
-<div *ngIf="food">
+<div *ngIf="food" class="container">
     <a [routerLink]="['/food', food.id]">
       <img [src]="food.imageUrl" alt="food image" class="food-image">
       <div class="content">
         <div class="name">
-          {{ food.name }}
+            {{ food.name }}
+        
+            <span class="favorites" [ngClass]="{ 'favorite': food.favorite, 'not': !food.favorite }">
+              <button>&#10084;</button>
+            </span>
         </div>
+         <div>
+          <mat-icon *ngFor="let star of [0, 1, 2, 3, 4]" [ngClass]="getStarType(food.star, star)">
+            {{ getStarType(food.star, star) }}
+          </mat-icon>
+        </div>
+          <div class="product-footer">
+             <div class="origins">
+                <span *ngFor="let origin of food.origin"> 
+                    {{origin}}
+                </span>
+             </div>
+             <div class="cook-time">
+                <span>🕒</span>
+              Time to cook about {{food.cookTime}}
+             </div>
+
+          </div>
+          <div class="prices">
+            <span>€</span>
+            {{food.price}}
+
+         </div>
         <div class="tags">
-            <app-tags></app-tags>
+            <app-tags [foodPagetags]="foodTags"></app-tags>
+        </div>
+        <div>
+            <button (click)="addToCart()" class="Cart">Add To Cart</button>
         </div>
         
       </div>

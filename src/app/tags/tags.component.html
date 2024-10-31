@@ -3,3 +3,8 @@
         {{ tag.name }} ({{ tag.count }})
       </a>
     </div>
+    <div *ngIf="foodPagetags">
+        <a *ngFor="let tagname of foodPagetags" [routerLink]="['/tag', tagname]">
+          {{ tagname }}
+        </a>
+      </div>
